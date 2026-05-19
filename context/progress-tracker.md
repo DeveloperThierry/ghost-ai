@@ -4,7 +4,7 @@ Update this file whenever the current phase, active feature, or implementation s
 
 ## Current Phase
 
-- Foundation: design system and UI primitives complete
+- Editor chrome: base shell components complete
 
 ## Current Goal
 
@@ -13,10 +13,11 @@ Update this file whenever the current phase, active feature, or implementation s
 ## Completed
 
 - 01-design-system: Installed and configured shadcn/ui (new-york style, neutral base, CSS variables). Added Button, Card, Dialog, Input, Tabs, Textarea, ScrollArea in `components/ui/`. Installed `lucide-react`. Added `lib/utils.ts` with `cn()` helper (clsx + tailwind-merge). Populated `app/globals.css` with the dark theme tokens from `ui-context.md` (CSS custom properties + `@theme inline` mapping for both project tokens and shadcn variables). `next build` and `tsc --noEmit` pass.
+- 02-editor-chrome: Created `components/editor/editor-navbar.tsx` (fixed-height navbar, left/center/right sections, sidebar toggle with `PanelLeftOpen`/`PanelLeftClose` icons, dark background + bottom border). Created `components/editor/project-sidebar.tsx` (fixed overlay, slides in from left via CSS transform, `isOpen` prop, Projects header + close button, shadcn Tabs with My Projects / Shared tabs + empty placeholder states, full-width New Project button). `tsc --noEmit` passes with zero errors.
 
 ## In Progress
 
-- None.
+- None. Dialog pattern: existing `components/ui/dialog.tsx` (shadcn) is ready to use with project tokens via `globals.css` aliases — no additional code needed.
 
 ## Next Up
 
